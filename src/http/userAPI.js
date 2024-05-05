@@ -2,11 +2,10 @@ import { guestInstance } from './index.js';
 
 export const setAuthor = async (email, name) => {
   try {
-    const response = await guestInstance.post('/create', { email, name });
-    const author = await response.json();
-    return author;
+    const response = await guestInstance.post('api/author/create', { email, name });
+    return response;
   } catch (e) {
-    alert(e.response.data.message);
+    alert(e.response);
     return false;
   }
 };
