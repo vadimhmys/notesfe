@@ -13,8 +13,7 @@ export default function SetAuthor() {
     setAuthorEmail(e.target.value);
   };
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const onDataSubmit = (e) => {
     setAuthor(authorEmail, authorName);
     setAuthorName('');
     setAuthorEmail('');
@@ -30,7 +29,7 @@ export default function SetAuthor() {
           Email автора: <input type="email" name="email" onChange={onEmailChange} />
         </label>
         <br />
-        <button type="submit" onSubmit={onSubmit}>Отправить</button>
+        <button type="submit" onClick={onDataSubmit}>Отправить</button>
       </form>
     </div>
   );
