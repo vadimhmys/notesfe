@@ -30,7 +30,7 @@ export default function SetAuthor() {
           Email автора: <input type="email" name="email" onChange={onEmailChange} />
         </label>
         <br />
-        <buttom type="submit" onSubmit={onSubmit}>Отправить</buttom>
+        <button type="submit" onSubmit={onSubmit}>Отправить</button>
       </form>
     </div>
   );
